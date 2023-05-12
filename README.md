@@ -13,11 +13,11 @@
 2021131020-邓景山
 
 ## 代码仓库链接
-https://github.com/swordofJR/Cryptocurrency
+https://github.com/swordofJR/blockchain-in-js-workshop-2021
 
 ## 第一课代码
 ## 代码 commint 地址
-https://github.com/swordofJR/Cryptocurrency/commit/main
+https://github.com/swordofJR/blockchain-in-js-workshop-2021/commit/lesson1
 
 ## 代码截图
 将截图上传至网盘，放入链接即可
@@ -27,7 +27,7 @@ https://github.com/swordofJR/Cryptocurrency/commit/main
 # 主观与讨论题内容
 ## 第一课代码
 ## 代码 commint 地址
-https://github.com/swordofJR/Cryptocurrency/commit/main
+https://github.com/swordofJR/blockchain-in-js-workshop-2021/commit/lesson1
 
 ## 代码截图
 将截图上传至网盘，放入链接即可
@@ -41,10 +41,12 @@ https://github.com/swordofJR/Cryptocurrency/commit/main
 # 主观与讨论题内容
 ## 第二课代码
 ## 代码 commint 地址
-https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/commit/25f3a0d83a9fff2b4514c5503f470df939d0c2af
+https://github.com/swordofJR/blockchain-in-js-workshop-2021/commit/lesson1
 
 ## 代码截图
-将截图上传至网盘，放入链接即可
+![IVPF N}RI`_3ZGN37NC`VWR](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/93745212-8e80-43dc-9621-bc4312bea8f2)
+![$`W(~EFB~YOK4Z7~NL(X`22](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/f9858ab1-8573-4530-a978-b4f6be6f3f16)
+
 
 
 # 主观与讨论题内容
