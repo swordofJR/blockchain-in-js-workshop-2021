@@ -9,6 +9,7 @@ Block
 ![W)D UN__053R2CUT SLI9KG](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/17fa6530-749e-4cab-94ea-8339aa06c6fe)
 BlockChain
 ![79I$6S2UP44LIFWZ9{C3K$B](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/ce2a8fa3-2275-420e-84f5-db6f4a5a6613)
+
 UTXO
 
 ![LIJJC5D9AH$RH(AHJWZW(DH](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/808122a1-0296-4b5e-ac87-8243ec605b39)
