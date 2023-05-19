@@ -96,6 +96,9 @@ UTXOPool
 ![ED9@AS@LZQP@)W} 8_BW5IU](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/e8e2350c-8dee-451f-973d-0eb9993e6dfb)
 lesson3
 ![_DWX89J~44XS_T`I@~J{@GB](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/12a0ce5f-7070-48c4-a4c4-c07a730ee739)
+运行结果
+![RIJQ6 V_1U$N@_12RD53TRS](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/fd8b17bb-dbd9-4d44-850a-63b802cb3002)
+
 # 主观与讨论题内容
 ## 第四课代码
 ## 代码 commint 地址
