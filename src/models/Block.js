@@ -1,6 +1,8 @@
 // const sha256 = require('crypto-js/sha256')
 import sha256 from 'crypto-js/sha256.js'
-import UTXOPool from './UTXOPool.js';
+import UTXOPool from './UTXOPool.js'
+import MerkleTree from './MerkleTree.js'
+import Transaction from './Transaction.js';
 
 class Block {
   // 1. 完成构造函数及其参数
