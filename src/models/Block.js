@@ -1,20 +1,44 @@
+// const sha256 = require('crypto-js/sha256')
 import sha256 from 'crypto-js/sha256.js'
-
-export const DIFFICULTY = 2
+import UTXOPool from './UTXOPool.js';
 
 class Block {
   // 1. 完成构造函数及其参数
+  /* 构造函数需要包含
 
-  constructor() {}
+  */
+  constructor(blockchain, parentHash, height, hash, miner) {
+    this.blockchain = blockchain;
+    this.parentHash = parentHash;
+    this.height = height;
+    this.hash = hash;
+    this.coinbaseBeneficiary = miner;
+    this.utxoPool = new UTXOPool({});
+    this.merkleTree = new MerkleTree([new Transaction(0, this.coinbaseBeneficiary, 12.5)]);
+    this.merkleTreeRoot = this.merkleTree.getRoot();
+  }
 
-  isValid() {}
+  getPreviousBlock() {
+    // 判断是否为高度为1的区块
+    if (this.height == 1) {
+      return this.blockchain.genesis
+    }
+    return this.blockchain.blocks[this.parentHash]
+}
 
-  setNonce(nonce) {}
+isValid() {
+  const leadingZero = '0'.repeat(DIFFICULTY)
+  this.setHash()
+  return this.hash.startsWith(leadingZero)
+}
 
-  // 根据交易变化更新区块 hash
-  _setHash() {}
-
-  // 汇总计算交易的 Hash 值
+setNonce(nonce) {
+  this.nonce = nonce
+}
+setHash() {
+  this,this.hash = sha256(this.nonce + this.parentHash + this.height + this.blockchain).toString()
+}
+// 汇总计算交易的 Hash 值
   /**
    * 默克尔树实现
    */
@@ -32,3 +56,4 @@ class Block {
 }
 
 export default Block
+export const DIFFICULTY = 3
