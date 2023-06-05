@@ -2,7 +2,8 @@
 import sha256 from 'crypto-js/sha256.js'
 import UTXOPool from './UTXOPool.js'
 import MerkleTree from './MerkleTree.js'
-import Transaction from './Transaction.js';
+import Transaction from './Transaction.js'
+import "./Transaction.js"
 
 class Block {
   // 1. 完成构造函数及其参数
@@ -45,7 +46,7 @@ setHash() {
    * 默克尔树实现
    */
   combinedTransactionsHash() {
-
+    return this.merkleTree.getRoot()
   }
 
   // 添加交易到区块
@@ -53,8 +54,10 @@ setHash() {
    * 
    * 需包含 UTXOPool 的更新与 hash 的更新
    */
-  addTransaction() {}
-
+  addTransaction(transaction) {
+    this.merkleTree.addNode(transaction)
+    this.utxoPool.handleTransaction(transaction)
+  }
 }
 
 export default Block
