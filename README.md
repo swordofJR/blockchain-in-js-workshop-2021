@@ -40,3 +40,8 @@ Proof of Work（PoW）是一种区块链共识算法，以比特币为代表，�
 总的来说，PoW 挖矿是一种安全、去中心化且防止恶意攻击的共识算法。虽然它需要大量的计算资源和电能支持以及可能造成网络拥堵等问题，但通过采用减半机制和其他技术手段，PoW 挖矿已经在数字货币领域得到了广泛的应用
 ## 阐述如何通过技术⼿段提⾼挖矿的效率?
 提高挖矿效率需要综合考虑硬件设备、软件配置、网络质量等多个因素，通过优化硬件设置、使用高效软件、参加矿池挖矿和保持良好的网络质量等方式，可以进一步提高挖矿效率，获得更多的挖矿收益。
+## 字典树
+![}C1E`0H$HAXZ$3O$9R1UW%C](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/0f6aba21-967d-441c-a4b3-b3340f6e03b4)
+![)55NSVCJ2_TE8I5A~UA4WNR](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/dec25a8d-200e-4886-8de4-110207b7fcfb)
+
+
