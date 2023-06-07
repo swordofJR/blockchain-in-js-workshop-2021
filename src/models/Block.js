@@ -51,7 +51,6 @@ setHash() {
 
   // 添加交易到区块
   /**
-   * 
    * 需包含 UTXOPool 的更新与 hash 的更新
    */
   addTransaction(transaction) {

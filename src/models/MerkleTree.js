@@ -39,17 +39,26 @@ class MerkleTree {
     getProof(index) {
         const proof = [];
         let idx = index;
-
+    
+        // 计算叶子节点的 hash 值
+        let hash = this.leaves[index];
+    
         for (let i = 0; i < this.tree.length - 1; i++) {
             const siblingIdx = idx % 2 === 0 ? idx + 1 : idx - 1;
-            const sibling = this.tree[siblingIdx];
-            proof.push(sibling);
-
+            if (siblingIdx < this.tree.length) {
+                const siblingHash = this.tree[siblingIdx];
+                // 根据元素大小来判断左右顺序
+                const [left, right] = hash < siblingHash ? [hash, siblingHash] : [siblingHash, hash];
+                proof.push(right);
+                hash = createHash('sha256').update(left + right).digest();
+            }
+    
             idx = Math.floor(idx / 2);
         }
-
+    
         return proof;
     }
+    
 
     verify(root, data, proof) {
         let hash = this.hashLeaf(data);
