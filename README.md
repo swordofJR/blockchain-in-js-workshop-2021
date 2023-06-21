@@ -196,7 +196,16 @@ https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/commit/25f3a0d8
 总之，交易费用是比特币网络中的重要组成部分。它们有助于维护网络的安全性和去中心化特性，同时也能确保交易的快速处理。去掉交易费用可能会引起一系列问题，影响比特币网络的稳定性和可靠性。
 # 结课报告
 =======
-![LLG@I({`SW)0DKFKA(BSY5Q](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/cdc0136f-3315-47ca-940c-a237c4b6c40c)
 
-![C~C3 SHDV 48UQAS%O1HS82](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/ddda6339-e42c-47f5-9b03-5152ea844c1f)
+![UOVS0VY0NQY 7%MV$Y1%F_D](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/f85ab8d8-3464-4d1b-973c-137da3879392)
+
+![E@~NY6CM3IKE9T1XU M7((2](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/304be2b6-88a7-44f2-94a7-45074a9bf143)
+
+![TW}{EY80%98CQAQLC@4N19](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/3a2d3030-3a6b-447f-bcdb-f3b7d9879657)
+
+![DX8 $OR$LAX90}JV{{HK2BU](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/85ddbe19-3cae-4bf6-acac-dac8176cbb15)
+
+![G_U@}$7BC1PV4ZL4RIG_U@W](https://github.com/swordofJR/blockchain-in-js-workshop-2021/assets/97501231/f0b1df5d-ee3b-41a3-afab-f7e6ccd8dc5a)
+
+
 >>>>>>> d8d249e4ee2638de18d4eca67af4f9ce325e3177
