@@ -66,6 +66,7 @@ const main = () => {
     nextBlock.hash,
     3,
     sha256(new Date().getTime().toString()).toString(),
+    miner
   )
 
   thirdBlock = calcNonce(thirdBlock)
@@ -88,7 +89,7 @@ const main = () => {
     'Error: blockchain should contain third block',
   )
 
-  let latestUTXOPool = thirdBlock.utxoPool
+  const latestUTXOPool = thirdBlock.utxoPool
   log(latestUTXOPool)
 
   assert(
@@ -105,21 +106,14 @@ const main = () => {
 
   let receiverPubKey =
     '0416fb87fec6248fb55d3f73e5210b51514ebd44e9ff2a5c0af87110e8a39da47bf063ef3cccec58b8b823791a6b62feb24fbd8427ff6782609dd3bda9ea138487'
-  let trx = new Transaction(miner, receiverPubKey, 1, 0.01)
-
-  let compareTrx = new Transaction(miner, receiverPubKey, 1, 0.02)
+  let trx = new Transaction(miner, receiverPubKey, 1)
 
   assert(validateHash(trx.hash), 'Error: Transaction hash invalid...')
 
   assert(trx._calculateHash() == trx.hash, 'Error: Trx hash invalid')
 
   assert(
-    trx._calculateHash() != compareTrx._calculateHash(),
-    'Error: Trx hash need calc with Fee',
-  )
-
-  assert(
-    latestUTXOPool.isValidTransaction(trx) == true,
+    latestUTXOPool.isValidTransaction(miner, 1) == true,
     'Error: trx need to be validate',
   )
 
@@ -141,16 +135,13 @@ const main = () => {
   // 打印最新的 UTXO pool
   log(latestUTXOPool)
 
-  let badTrx = new Transaction(miner, receiverPubKey, 100, 0.1)
-
+  let badTrx = new Transaction(miner, receiverPubKey, 100)
+  
   // 对比更新交易之后的 hash 数据
   let trxHash = thirdBlock.combinedTransactionsHash().toString()
   thirdBlock.addTransaction(badTrx)
 
-  assert(
-    trxHash != thirdBlock.combinedTransactionsHash().toString(),
-    'Error: new trx cannot have same hash',
-  )
+  assert(trxHash != thirdBlock.combinedTransactionsHash().toString(), 'Error: new trx cannot have same hash')
 
   assert(
     latestUTXOPool.utxos[miner] && latestUTXOPool.utxos[miner].amount == 36.5,
@@ -158,25 +149,14 @@ const main = () => {
   )
 
   assert(
+    latestUTXOPool.isValidTransaction(receiverPubKey, 100) == false,
+    'Error: trx need to be validate',
+  )
+
+  assert(
     latestUTXOPool.utxos[receiverPubKey] &&
       latestUTXOPool.utxos[receiverPubKey].amount == 1,
     'Error: receiver should got right balance',
-  )
-
-  // check fee change
-
-  const newTrx = new Transaction(receiverPubKey, miner, 0.1, 0.01)
-  thirdBlock.addTransaction(newTrx)
-
-  assert(
-    latestUTXOPool.utxos[receiverPubKey] &&
-      latestUTXOPool.utxos[receiverPubKey].amount == 0.89,
-    'Error: receiver should got right balance',
-  )
-
-  assert(
-    latestUTXOPool.utxos[miner] && latestUTXOPool.utxos[miner].amount == 36.61,
-    'Error: miner should got right balance',
   )
 }
 
